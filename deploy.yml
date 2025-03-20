@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: app
-        image: bharath0812/httpd:blue  # Change this to v2 in Git to trigger rollout
+        image: bharath0812/httpd:green  # Change this to v2 in Git to trigger rollout
         ports:
         - containerPort: 80
 ---
