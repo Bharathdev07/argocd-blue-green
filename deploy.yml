@@ -9,7 +9,7 @@ spec:
     blueGreen:
       activeService: myapp-active
       previewService: myapp-preview
-      autoPromotionEnabled: false  # Set to true for automatic switch
+      autoPromotionEnabled: true  # Set to true for automatic switch
   selector:
     matchLabels:
       app: myapp
@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: app
-        image: myapp:v1  # Change this to v2 in Git to trigger rollout
+        image: bharath0812/httpd:blue  # Change this to v2 in Git to trigger rollout
         ports:
         - containerPort: 80
 ---
